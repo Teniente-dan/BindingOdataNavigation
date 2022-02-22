@@ -1,0 +1,22 @@
+{
+  "generator-template-ui5-project": {
+    "projectname": "firstApp",
+    "namespaceUI5": "curso.fiori",
+    "platform": "Static webserver",
+    "viewtype": "XML",
+    "ui5libs": "Content delivery network (OpenUI5)",
+    "newdir": false,
+    "codeassist": true,
+    "namespaceURI": "curso/fiori",
+    "opa5pos": [
+      "Main"
+    ],
+    "opa5Journeys": [
+      "Main"
+    ],
+    "uimodules": [
+      "uimodule"
+    ],
+    "setupCompleted": true
+  }
+}
