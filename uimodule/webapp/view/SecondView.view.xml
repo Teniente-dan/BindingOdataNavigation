@@ -1,0 +1,106 @@
+<mvc:View controllerName="curso.fiori.firstApp.controller.SecondView"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    displayBlock="true" height="100%" busyIndicatorDelay="0">
+    <Page id="page1">
+        <content>
+            <Panel headerText="Ejemplo Binding oData">
+                <Table id="tablaId" items="{tabla>/}" class="sapUiLargeMarginBottom">
+                    <columns>
+                        <Column>
+                            <Text text="columan1"/>
+                            <footer>
+                                <Text text="footer1"></Text>
+                            </footer>
+                            <header>
+                                <Text text="header1"></Text>
+                            </header>
+                        </Column>
+                        <Column>
+                            <Text text="columan2"/>
+                            <footer>
+                                <Text text="footer2"></Text>
+                            </footer>
+                            <header>
+                                <Text text="header2"></Text>
+                            </header>
+                        </Column>
+                    </columns>
+                    <items>
+                        <ColumnListItem vAlign="Inherit">
+                            <cells>
+                                <ObjectIdentifier text="{tabla>CategoryName}" textDirection="Inherit" title="" titleActive="false" visible="true" />
+                                <ObjectIdentifier text="{tabla>Description}" textDirection="Inherit" title="" titleActive="false" visible="true" />
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+                
+             <!-- <Table id="tablaId2" items="{ path : 'tablaDataSource>/Categories', 
+                                              parameters : {
+                                                    expand:'Products'} 
+                                              }">                                               -->
+                <Table id="tablaId2" items="{tablaDataSource>/Categories}" class="sapUiLargeMarginBottom">
+                    <columns>
+                        <Column>
+                            <Text text="columan1"/>
+                            <footer>
+                                <Text text="footer1"></Text>
+                            </footer>
+                            <header>
+                                <Text text="header1"></Text>
+                            </header>
+                        </Column>
+                        <Column>
+                            <Text text="columan2"/>
+                            <footer>
+                                <Text text="footer2"></Text>
+                            </footer>
+                            <header>
+                                <Text text="header2"></Text>
+                            </header>
+                        </Column>
+                    </columns>
+                    <items>
+                        <ColumnListItem vAlign="Inherit" type="Navigation" press="onPress">
+                            <cells>
+                                <ObjectIdentifier text="{tablaDataSource>CategoryName}" textDirection="Inherit" title="" titleActive="false" visible="true" />
+                                <ObjectIdentifier text="{tablaDataSource>Description}" textDirection="Inherit" title="" titleActive="false" visible="true" />
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+                <Table id="tablaProducts" items="{path: 'tablaDataSource>Products'}" class="sapUiLargeMarginBottom">
+                    <columns>
+                        <Column>
+                            <Text text="columan1"/>
+                            <footer>
+                                <Text text="footer1"></Text>
+                            </footer>
+                            <header>
+                                <Text text="header1"></Text>
+                            </header>
+                        </Column>
+                        <Column>
+                            <Text text="columan2"/>
+                            <footer>
+                                <Text text="footer2"></Text>
+                            </footer>
+                            <header>
+                                <Text text="header2"></Text>
+                            </header>
+                        </Column>
+                    </columns>
+                    <items>
+                        <ColumnListItem vAlign="Inherit">
+                            <cells>
+                                <ObjectIdentifier text="{tablaDataSource>ProductName}" textDirection="Inherit" title="" titleActive="false" visible="true" />
+                                <ObjectIdentifier text="{tablaDataSource>UnitPrice}" textDirection="Inherit" title="" titleActive="false" visible="true" />
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </Panel>
+        </content>
+    </Page>
+</mvc:View>

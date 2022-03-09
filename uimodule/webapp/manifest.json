@@ -8,7 +8,19 @@
       "version": "0.0.1"
     },
     "title": "{{appTitle}}",
-    "description": "{{appDescription}}"
+
+    "description": "{{appDescription}}",
+
+    "dataSources": {
+      "mainService": {
+        "uri": "/Northwind/",
+        "type": "OData",
+        "settings": {
+                "odataVersion": "2.0"
+        }
+    }
+  }
+
   },
   "sap.ui": {
     "technology": "UI5",
@@ -44,7 +56,11 @@
         "settings": {
           "bundleName": "curso.fiori.firstApp.i18n.i18n"
         }
-      }
+      },
+      "tablaDataSource": {
+        "dataSource": "mainService",
+        "preload": true
+      }          
     },
     "resources": {
       "css": [
@@ -63,22 +79,37 @@
         "controlId": "app",
         "clearControlAggregation": false
       },
-      "routes": [
+      "routes": [        
         {
           "name": "RouteMainView",
           "pattern": "RouteMainView",
           "target": [
             "TargetMainView"
           ]
-        }
+        },
+        {
+          "name": "RouteSecondView",
+          "pattern": "",
+          "target": [
+            "TargetSecondView"
+          ]
+        }       
       ],
+      
       "targets": {
         "TargetMainView": {
           "viewType": "XML",
-          "transition": "slide",
-          "clearControlAggregation": false,
+          "transition": "slide",          
           "viewId": "MainView",
           "viewName": "MainView"
+        },
+        "TargetSecondView": {
+          "viewType": "XML",
+          "viewLevel": 1,
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "SecondView",
+          "viewName": "SecondView"
         }
       }
     },
