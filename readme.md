@@ -1,9 +1,2 @@
-# firstApp
-
-Insert the purpose of this project and some interesting infos here
-
-## Credits
-
-This project has been generated with 💙 and [easy-ui5](https://github.com/SAP)
-
-Binding desde odata a master detail
+# Binding Odata
+Binding desde odata con navegacion/expand a master detail
